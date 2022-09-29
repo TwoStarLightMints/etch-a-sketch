@@ -6,7 +6,7 @@
     flex-wrap: wrap;
     /* Hacky work around to prevent a small
     gap from appearing between border and grid */
-    background-color: black;
+    background-color: white;
     border: 5px solid black;
 }
 
@@ -19,7 +19,23 @@
 }
 
 .etch-a-sketch {
-    padding: 10px;
+    padding: 15px;
     background-color: red;
-    flex-grow: 0;
+    border: 1px solid red;
+    border-radius: 20px;
+}
+
+.knobs {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.knob {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 100%;
 }
