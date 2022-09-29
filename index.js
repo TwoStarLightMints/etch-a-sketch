@@ -1,4 +1,3 @@
-const button = document.querySelector('#clear');
 const container = document.querySelector('#container');
 
 function clearBoard () {
