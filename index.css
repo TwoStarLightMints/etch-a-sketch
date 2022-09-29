@@ -10,5 +10,5 @@
 }
 
 #container div {
-    margin: 0px;
+    flex-grow: 1;
 }
