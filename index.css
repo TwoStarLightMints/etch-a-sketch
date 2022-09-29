@@ -1,5 +1,12 @@
 #container {
-    width: 200px;
+    width: 192px;
+    height: 192px;
     display: flex;
     flex-wrap: wrap;
+    background-color: black;
+    border: 5px solid black;
+}
+
+#container div {
+    margin: 0px;
 }
