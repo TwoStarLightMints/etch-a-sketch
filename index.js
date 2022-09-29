@@ -1,11 +1,11 @@
 const button = document.querySelector('#clear');
 const container = document.querySelector('#container');
 
-button.addEventListener('click', () => {
+function clearBoard () {
     container.childNodes.forEach(elem => {
         elem.style.backgroundColor = 'red';
     });
-});
+}
 
 for (let i = 0; i < 16; i++) {
     for (let i = 0; i < 16; i++) {
