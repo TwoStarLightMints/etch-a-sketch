@@ -1,9 +1,15 @@
+// Left off, creating a drawing function that
+// fires and creates the initial grid
+// and then removes the initial grid
+// when the user wishes to augment the number
+// of squares in the grid by way of a button
+// press
+
 const container = document.querySelector('#container');
+const drawButton = document.querySelector('#draw');
 
-const GRID_SIZE = 192;
+const GRID_SIZE = 360;
 const INNER_BORDER_SIZE = 1;
-
-let numSquares = 16;
 
 function clearBoard () {
     container.childNodes.forEach(elem => {
@@ -32,25 +38,33 @@ function getNumSquares () {
 }
 
 function calculateSquareSizes (numSquares) {
-    return (192 - (INNER_BORDER_SIZE * numSquares * 2)) / numSquares;
+    return (GRID_SIZE - (INNER_BORDER_SIZE * numSquares * 2)) / numSquares;
 }
 
-let squareSizes = calculateSquareSizes(numSquares);
+function drawGrid (numSquares) {
+    if (container.childNodes.length != 0) {
+        container.textContent = '';
+    }
+    
+    let squareSize = calculateSquareSizes(numSquares);
 
-for (let i = 0; i < numSquares; i++) {
     for (let i = 0; i < numSquares; i++) {
-        let newDiv = document.createElement('div');
-        // newDiv.style.display = 'inline-block';
-        newDiv.style.backgroundColor = 'red';
-        newDiv.style.border = '1px solid black';
-        newDiv.style.display = 'inline-block';
-        newDiv.style.height = `${squareSizes}px`;
-        newDiv.style.width = `${squareSizes}px`;
-        newDiv.addEventListener('mouseover', e => {
-            e.target.style.backgroundColor = 'black';
-        });
-        container.appendChild(newDiv);
+        for (let i = 0; i < numSquares; i++) {
+            let newDiv = document.createElement('div');
+            // newDiv.style.display = 'inline-block';
+            newDiv.style.backgroundColor = 'red';
+            newDiv.style.border = '1px solid black';
+            newDiv.style.display = 'inline-block';
+            newDiv.style.height = `${squareSize}px`;
+            newDiv.style.width = `${squareSize}px`;
+            newDiv.addEventListener('mouseover', e => {
+                e.target.style.backgroundColor = 'black';
+            });
+            container.appendChild(newDiv);
+        }
     }
 }
 
-console.log(getNumSquares());
+drawButton.addEventListener('click', () => {
+    drawGrid(getNumSquares());
+});
