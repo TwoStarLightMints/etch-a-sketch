@@ -9,8 +9,21 @@
     <link rel="stylesheet" href="index.css" />
 </head>
 <body>
-    <button id="draw">Create a new board</button>
-    <button onclick="clearBoard()">Clear</button>
-    <div id="container"></div>
+    <h1>Welcome to my Etch-A-Sketch!</h1>
+    
+    <div class="ui">
+        <div class="buttons">
+            <button id="draw">Create a new board</button>
+            <button onclick="clearBoard()">Shake the board</button>
+        </div>
+        <div class="etch-a-sketch">
+            <div id="container"></div>
+            <div class="knobs">
+                <div class="knob"></div>
+                <div class="knob"></div>
+            </div>
+        </div>
+    </div>
+    
 </body>
 </html>
