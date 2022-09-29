@@ -13,7 +13,7 @@ const INNER_BORDER_SIZE = 1;
 
 function clearBoard () {
     container.childNodes.forEach(elem => {
-        elem.style.backgroundColor = 'red';
+        elem.style.backgroundColor = 'white';
     });
 }
 
@@ -52,7 +52,7 @@ function drawGrid (numSquares) {
         for (let i = 0; i < numSquares; i++) {
             let newDiv = document.createElement('div');
             // newDiv.style.display = 'inline-block';
-            newDiv.style.backgroundColor = 'red';
+            newDiv.style.backgroundColor = 'white';
             newDiv.style.border = '1px solid black';
             newDiv.style.display = 'inline-block';
             newDiv.style.height = `${squareSize}px`;
