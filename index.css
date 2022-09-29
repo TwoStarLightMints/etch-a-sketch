@@ -3,6 +3,8 @@
     height: 192px;
     display: flex;
     flex-wrap: wrap;
+    /* Hacky work around to prevent a small
+    gap from appearing between border and grid */
     background-color: black;
     border: 5px solid black;
 }
