@@ -9,3 +9,17 @@
     background-color: black;
     border: 5px solid black;
 }
+
+.ui {
+    width: fit-content;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.etch-a-sketch {
+    padding: 10px;
+    background-color: red;
+    flex-grow: 0;
+}
